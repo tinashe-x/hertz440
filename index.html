@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hertz440 - Official Music Website. Stream the latest tracks including 'FIX', 'MORE', and 'THE BLOCK'.">
+    <meta name="keywords" content="Hertz440, Music, Artist, FIX, MORE, THE BLOCK">
+    <meta name="author" content="Hertz440">
+    <meta property="og:title" content="Hertz440 | OFFICIAL SITE">
+    <meta property="og:description" content="Stream the latest tracks from Hertz440 including 'FIX', 'MORE', and 'THE BLOCK'.">
+    <meta property="og:image" content="https://i.postimg.cc/kXhKPYF2/temp-Imagel-M4-KBR.avif">
+    <meta property="og:url" content="https://hertz440.com">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <title>Hertz440 | OFFICIAL SITE</title>
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" as="style">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+    
+    <!-- Stylesheets -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    
+    <!-- Scripts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body class="min-h-screen">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-black/80 backdrop-blur-md transition-all duration-300">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold tracking-tighter glow-text hover:text-purple-500 transition-colors duration-300">
+                Hz<span class="text-purple-500">.</span>
+            </div>
+            
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#music" class="nav-link text-lg hover:text-purple-400">MUSIC</a>
+                <a href="#videos" class="nav-link text-lg hover:text-purple-400">VIDEOS</a>
+                <a href="#contact" class="nav-link text-lg hover:text-purple-400">CONTACT</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button id="menu-toggle" class="md:hidden text-2xl focus:outline-none hover:text-purple-500 transition-colors duration-300">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu hidden md:hidden bg-black/95 backdrop-blur-md w-full h-0 overflow-hidden">
+            <div class="container mx-auto px-4 py-2 flex flex-col space-y-4">
+                <a href="#music" class="nav-link py-2 text-lg hover:text-purple-400">MUSIC</a>
+                <a href="#videos" class="nav-link py-2 text-lg hover:text-purple-400">VIDEOS</a>
+                <a href="#contact" class="nav-link py-2 text-lg hover:text-purple-400">CONTACT</a>
+                <div class="flex space-x-6 py-4 justify-center">
+                    <a href="#" class="social-icon hover:text-purple-400"><i class="fab fa-instagram text-2xl"></i></a>
+                    <a href="#" class="social-icon hover:text-purple-400"><i class="fab fa-twitter text-2xl"></i></a>
+                    <a href="#" class="social-icon hover:text-purple-400"><i class="fab fa-youtube text-2xl"></i></a>
+                    <a href="#" class="social-icon hover:text-purple-400"><i class="fab fa-spotify text-2xl"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden cyberpunk-bg">
+        <div class="grid">
+            <div class="grid-lines-x"></div>
+            <div class="grid-lines-y"></div>
+        </div>
+        <div class="floating-elements">
+            <div class="floating-element element-1">
+                <div class="p-2">
+                    <i class="fas fa-music text-blue-300"></i>
+                </div>
+            </div>
+            <div class="floating-element element-2">
+                <div class="p-2">
+                    <i class="fas fa-clock text-blue-300"></i>
+                </div>
+            </div>
+            <div class="floating-element element-3">
+                <div class="p-2">
+                    <i class="fas fa-wave-square text-blue-300"></i>
+                </div>
+            </div>
+            <div class="floating-element element-4">
+                <div class="p-2">
+                    <i class="fas fa-globe text-blue-300"></i>
+                </div>
+            </div>
+        </div>
+        
+        <div class="relative z-10 text-center px-4 hero-content">
+            <h1 class="text-5xl md:text-8xl font-black mb-4 tracking-tighter cyber-text">
+                Hertz440<span class="cyber-accent">.</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 uppercase tracking-widest cyber-text" contenteditable="true">GMM LOADING...</p>
+            <a href="https://unitedmasters.com/a/hertz440x" class="inline-block bg-transparent border-2 border-[#00f3ff] text-white px-8 py-3 rounded-none font-bold text-lg transition-all duration-300 hover:bg-[#00f3ff]/20 hover:scale-105 cyber-text">
+                STREAM NOW
+            </a>
+        </div>
+
+        <!-- Floating Icons -->
+        <div class="absolute right-0 top-0 h-full w-1/4 flex flex-col items-end justify-center space-y-12 pr-10 z-20">
+            <a href="#" class="float-icon relative" data-track="1" style="animation-delay: 0s;">
+                <div class="mac-folder">
+                    <span class="mac-folder-label">Track 1</span>
+                </div>
+            </a>
+            <a href="#" class="float-icon relative" data-track="2" style="animation-delay: 1s;">
+                <div class="mac-folder">
+                    <span class="mac-folder-label">Track 2</span>
+                </div>
+            </a>
+            <a href="#" class="float-icon relative" data-track="3" style="animation-delay: 2s;">
+                <div class="mac-folder">
+                    <span class="mac-folder-label">Track 3</span>
+                </div>
+            </a>
+            <a href="#" class="float-icon relative" data-track="4" style="animation-delay: 3s;">
+                <div class="mac-folder">
+                    <span class="mac-folder-label">Track 4</span>
+                </div>
+            </a>
+        </div>
+        
+        <div class="absolute bottom-10 left-0 right-0 text-center z-20">
+            <a href="#music" class="text-white animate-bounce inline-block">
+                <i class="fas fa-chevron-down text-2xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Music Section -->
+    <section id="music" class="section-container">
+        <div class="container mx-auto">
+            <h2 class="text-4xl md:text-6xl font-bold mb-12 text-center glow-text animate-fade-in">MUSIC</h2>
+            
+            <div class="music-grid">
+                <!-- GMM -->
+                <div class="music-item">
+                    <div class="music-image">
+                        <img src="https://i.postimg.cc/kXhKPYF2/temp-Imagel-M4-KBR.avif" alt="GMM Album Cover">
+                        <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                            <button class="bg-purple-600 hover:bg-purple-700 text-white rounded-full w-16 h-16 flex items-center justify-center transform hover:scale-110 transition-transform duration-300">
+                                <i class="fas fa-play text-xl"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="music-content">
+                        <h3 class="text-2xl font-bold mb-2 text-purple-300">'FIX'</h3>
+                        <p class="text-gray-400">OUT NOW • 2025</p>
+                    </div>
+                    <div class="music-icons">
+                        <a href="https://open.spotify.com/track/13vR2ca5s4i95c1MCSm6Mi?si=fb4700bd3a5d4110" target="_blank" rel="noopener noreferrer" class="hover:text-purple-400"><i class="fab fa-spotify text-2xl"></i></a>
+                        <a href="https://music.apple.com/za/album/fix/1803041407?i=1803041409" target="_blank" rel="noopener noreferrer" class="hover:text-purple-400"><i class="fab fa-apple text-2xl"></i></a>
+                        <a href="https://youtu.be/RxIQ9B5pH7s?si=YdDKAhlEtyHuSP5K" target="_blank" rel="noopener noreferrer" class="hover:text-purple-400"><i class="fab fa-youtube text-2xl"></i></a>
+                    </div>
+                </div>
+
+                <!-- Previous Album -->
+                <div class="music-item">
+                    <div class="music-image">
+                        <img src="https://i.postimg.cc/rFdzxVxp/temp-Image-Dh-Jw-Wg.avif" alt="Latest Single Cover">
+                        <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                            <button class="bg-purple-600 hover:bg-purple-700 text-white rounded-full w-16 h-16 flex items-center justify-center transform hover:scale-110 transition-transform duration-300">
+                                <i class="fas fa-play text-xl"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="music-content">
+                        <h3 class="text-2xl font-bold mb-2 text-purple-300">'MORE'</h3>
+                        <p class="text-gray-400">OUT NOW • 2025</p>
+                    </div>
+                    <div class="music-icons">
+                        <a href="https://open.spotify.com/track/226TgvZdMPpVkeVP3zkMAV?si=46c7d2012db34e78" target="_blank" rel="noopener noreferrer" class="hover:text-purple-400"><i class="fab fa-spotify text-2xl"></i></a>
+                        <a href="https://music.apple.com/za/album/more-feat-graciee/1812591120?i=1812591121" target="_blank" rel="noopener noreferrer" class="hover:text-purple-400"><i class="fab fa-apple text-2xl"></i></a>
+                        <a href="https://youtu.be/iVIyYnXn-UA?si=WyY1LHGHwn0cfUh-" target="_blank" rel="noopener noreferrer" class="hover:text-purple-400"><i class="fab fa-youtube text-2xl"></i></a>
+                    </div>
+                </div>
+
+                <!-- Latest Single -->
+                <div class="music-item">
+                    <div class="music-image">
+                        <img src="https://i.postimg.cc/gcg63t7g/temp-Image5-Sj-Ua3.avif" alt="Previous Album Cover">
+                        <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                            <button class="bg-purple-600 hover:bg-purple-700 text-white rounded-full w-16 h-16 flex items-center justify-center transform hover:scale-110 transition-transform duration-300">
+                                <i class="fas fa-play text-xl"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="music-content">
+                        <h3 class="text-2xl font-bold mb-2 text-purple-300">'THE BLOCK'</h3>
+                        <p class="text-gray-400">2025 • COMING SOON</p>
+                    </div>
+                    <div class="music-icons">
+                        <a href="https://open.spotify.com/artist/5uJjW3akqhj7YcvdImBDdA?si=3g44kCpSRY6MmuHmkGPZzg" target="_blank" rel="noopener noreferrer" class="hover:text-purple-400"><i class="fab fa-spotify text-2xl"></i></a>
+                        <a href="https://music.apple.com/za/artist/hertz440/1801616328" target="_blank" rel="noopener noreferrer" class="hover:text-purple-400"><i class="fab fa-apple text-2xl"></i></a>
+                        <a href="https://www.youtube.com/channel/UCOHsiCs441_OSgrq0GcpZ2w" target="_blank" rel="noopener noreferrer" class="hover:text-purple-400"><i class="fab fa-youtube text-2xl"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Featured Video Section -->
+    <section id="videos" class="section-container">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-6xl font-bold mb-12 text-center glow-text">FEATURED VIDEO</h2>
+            
+            <div class="video-container rounded-lg overflow-hidden shadow-2xl">
+                <iframe 
+                    src="https://www.youtube.com/embed/_Ba50vax6Y4" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            
+            <div class="text-center mt-8">
+                <a href="https://www.youtube.com/@Hertz440" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-bold transition-all duration-300 text-lg">
+                    <i class="fab fa-youtube text-2xl"></i>
+                    SUBSCRIBE ON YOUTUBE
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Social Media Section -->
+    <section id="contact" class="section-container">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-6xl font-bold mb-12 glow-text">CONNECT</h2>
+            
+            <div class="flex justify-center space-x-8 mb-12">
+                <a href="https://www.instagram.com/hertz440_/" class="social-icon text-3xl md:text-4xl">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://music.apple.com/za/artist/hertz440/1801616328" class="social-icon text-3xl md:text-4xl">
+                    <i class="fab fa-apple"></i>
+                </a>
+                <a href="https://www.youtube.com/channel/UCOHsiCs441_OSgrq0GcpZ2w" class="social-icon text-3xl md:text-4xl">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://open.spotify.com/artist/5uJjW3akqhj7YcvdImBDdA?si=3g44kCpSRY6MmuHmkGPZzg" class="social-icon text-3xl md:text-4xl">
+                    <i class="fab fa-spotify"></i>
+                </a>
+                <a href="https://www.tiktok.com/@hertz440_" class="social-icon text-3xl md:text-4xl">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
+            
+            <p class="text-xl mb-8">STAY UPDATED WITH THE LATEST NEWS AND RELEASES</p>
+            
+            <form class="max-w-md mx-auto px-4">
+                <div class="flex flex-col sm:flex-row gap-2">
+                    <input type="email" placeholder="YOUR EMAIL" class="w-full px-4 py-3 bg-gray-800 text-white border border-gray-700 rounded-lg sm:rounded-l-lg sm:rounded-r-none focus:outline-none focus:ring-2 focus:ring-red-500">
+                    <button type="submit" class="w-full sm:w-auto bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-lg sm:rounded-l-none sm:rounded-r-lg font-bold transition-all duration-300">
+                        SUBSCRIBE
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-black py-8 border-t border-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-xl font-bold mb-4 md:mb-0 glow-text">
+                    Hertz440<span class="text-red-500">.</span>
+                </div>
+                
+                <div class="text-gray-400 text-sm">
+                    &copy; 2023 Hertz440 NAME. ALL RIGHTS RESERVED.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Holo Player -->
+    <div class="holo-player">
+        <div class="holo-player-content">
+            <div class="holo-player-header">
+                <div class="holo-player-title">Track Title</div>
+                <button class="minimize-btn">
+                    <i class="fas fa-minus"></i>
+                </button>
+                <button class="holo-player-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="holo-player-visualizer">
+                <div class="visualizer-bars">
+                    <div class="visualizer-bar"></div>
+                    <div class="visualizer-bar"></div>
+                    <div class="visualizer-bar"></div>
+                    <div class="visualizer-bar"></div>
+                    <div class="visualizer-bar"></div>
+                    <div class="visualizer-bar"></div>
+                    <div class="visualizer-bar"></div>
+                    <div class="visualizer-bar"></div>
+                    <div class="visualizer-bar"></div>
+                    <div class="visualizer-bar"></div>
+                </div>
+            </div>
+            <div class="holo-player-controls">
+                <button class="holo-player-btn">
+                    <i class="fas fa-step-backward"></i>
+                </button>
+                <button class="holo-player-btn play">
+                    <i class="fas fa-play"></i>
+                </button>
+                <button class="holo-player-btn">
+                    <i class="fas fa-step-forward"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio Elements -->
+    <audio id="track1" preload="auto">
+        <source src="assets/audio/just-watch.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="track2" preload="auto">
+        <source src="assets/audio/break-from-madness.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="track3" preload="auto">
+        <source src="assets/audio/fix.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="track4" preload="auto">
+        <source src="assets/audio/more.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html> 
