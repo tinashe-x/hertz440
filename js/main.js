@@ -241,19 +241,37 @@ document.querySelectorAll('.float-icon').forEach(icon => {
     });
 });
 
+// API endpoint - update this with your Render.com URL after deployment
+const API_URL = 'https://hertz440-backend.onrender.com';
+
 // Email form submission
 const emailForm = document.querySelector('form');
 const emailInput = document.querySelector('input[type="email"]');
 const submitBtn = document.querySelector('button[type="submit"]');
 
-// API endpoint - update this with your Render.com URL
-const API_URL = 'https://hertz440-backend.onrender.com';
+// Test API connection
+async function testAPI() {
+    try {
+        const response = await fetch('/api/test');
+        const data = await response.json();
+        console.log('API test response:', data);
+    } catch (error) {
+        console.error('API test failed:', error);
+    }
+}
+
+// Run API test when page loads
+testAPI();
 
 emailForm.addEventListener('submit', async (e) => {
     e.preventDefault();
+    console.log('Form submitted');
+    
     const email = emailInput.value.trim();
+    console.log('Email value:', email);
     
     if (!email) {
+        console.log('No email provided');
         showFormMessage('Please enter your email address', 'error');
         return;
     }
@@ -263,8 +281,10 @@ emailForm.addEventListener('submit', async (e) => {
         submitBtn.disabled = true;
         submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
         
+        console.log('Sending subscription request...');
+        
         // Send subscription request
-        const response = await fetch(`${API_URL}/api/subscribe`, {
+        const response = await fetch('/api/subscribe', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -272,13 +292,17 @@ emailForm.addEventListener('submit', async (e) => {
             body: JSON.stringify({ email })
         });
 
+        console.log('Response status:', response.status);
         const data = await response.json();
+        console.log('Response data:', data);
 
         if (data.success) {
+            console.log('Subscription successful');
             showFormMessage(data.message, 'success');
             emailInput.value = '';
         } else {
-            showFormMessage(data.message, 'error');
+            console.log('Subscription failed:', data.message);
+            showFormMessage(data.message || 'An error occurred', 'error');
         }
     } catch (error) {
         console.error('Subscription error:', error);
@@ -291,6 +315,8 @@ emailForm.addEventListener('submit', async (e) => {
 });
 
 function showFormMessage(message, type) {
+    console.log('Showing message:', { message, type });
+    
     // Remove any existing message
     const existingMessage = document.querySelector('.form-message');
     if (existingMessage) {

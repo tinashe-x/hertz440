@@ -131,7 +131,7 @@ body {
         0 0 10px var(--neon-blue),
         0 0 20px var(--neon-blue),
         0 0 40px var(--neon-blue);
-    animation: textPulse 2s ease-in-out infinite;
+    animation: textPulse 3s ease-in-out infinite;
 }
 
 .cyber-accent {
@@ -140,7 +140,7 @@ body {
         0 0 10px var(--neon-pink),
         0 0 20px var(--neon-pink),
         0 0 40px var(--neon-pink);
-    animation: textPulse 2s ease-in-out infinite alternate;
+    animation: textPulse 3s ease-in-out infinite alternate;
 }
 
 @keyframes gridMove {
@@ -155,7 +155,9 @@ body {
 
 @keyframes textPulse {
     0% { opacity: 0.8; }
-    100% { opacity: 1; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0.8; }
 }
 
 .glow-text {
