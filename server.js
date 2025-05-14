@@ -43,7 +43,8 @@ app.post('/api/subscribe', async (req, res) => {
         hasEmailOctopusKey: !!process.env.EMAILOCTOPUS_API_KEY,
         hasEmailOctopusList: !!process.env.EMAILOCTOPUS_LIST_ID,
         hasEmailUser: !!process.env.EMAIL_USER,
-        hasEmailPass: !!process.env.EMAIL_PASS
+        hasEmailPass: !!process.env.EMAIL_PASS,
+        emailUser: process.env.EMAIL_USER // Log the actual email (without password)
     });
     
     try {
@@ -102,22 +103,28 @@ app.post('/api/subscribe', async (req, res) => {
                 });
             }
 
-            throw emailOctopusError; // Re-throw to be caught by outer catch
+            throw emailOctopusError;
         }
 
         // Send confirmation email if Gmail credentials are configured
         if (process.env.EMAIL_USER && process.env.EMAIL_PASS) {
             try {
-                console.log('Sending confirmation email...');
+                console.log('Setting up email transporter...');
                 const transporter = nodemailer.createTransport({
                     service: 'gmail',
                     auth: {
                         user: process.env.EMAIL_USER,
                         pass: process.env.EMAIL_PASS
-                    }
+                    },
+                    debug: true // Enable debug logging
                 });
 
-                await transporter.sendMail({
+                // Verify transporter configuration
+                await transporter.verify();
+                console.log('Email transporter verified successfully');
+
+                console.log('Sending confirmation email...');
+                const mailOptions = {
                     from: process.env.EMAIL_USER,
                     to: email,
                     subject: 'Welcome to Hertz440!',
@@ -126,12 +133,23 @@ app.post('/api/subscribe', async (req, res) => {
                         <p>Thank you for subscribing to our newsletter. You'll be the first to know about new releases and updates.</p>
                         <p>Stay tuned!</p>
                     `
-                });
-                console.log('Confirmation email sent successfully');
+                };
+
+                const info = await transporter.sendMail(mailOptions);
+                console.log('Confirmation email sent successfully:', info);
             } catch (emailError) {
-                console.error('Email sending error:', emailError);
+                console.error('Detailed email sending error:', {
+                    message: emailError.message,
+                    code: emailError.code,
+                    command: emailError.command,
+                    responseCode: emailError.responseCode,
+                    response: emailError.response,
+                    stack: emailError.stack
+                });
                 // Continue even if email fails
             }
+        } else {
+            console.log('Email credentials not configured, skipping confirmation email');
         }
 
         console.log('Subscription successful for:', email);

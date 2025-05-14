@@ -241,8 +241,10 @@ document.querySelectorAll('.float-icon').forEach(icon => {
     });
 });
 
-// API endpoint - update this with your Render.com URL after deployment
-const API_URL = 'https://hertz440-backend.onrender.com';
+// API endpoint - use relative path locally, full URL in production
+const API_URL = window.location.hostname === 'localhost'
+  ? ''
+  : 'https://hertz440-backend.onrender.com';
 
 // Email form submission
 const emailForm = document.querySelector('form');
@@ -284,7 +286,7 @@ emailForm.addEventListener('submit', async (e) => {
         console.log('Sending subscription request...');
         
         // Send subscription request
-        const response = await fetch('/api/subscribe', {
+        const response = await fetch(`${API_URL}/api/subscribe`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
