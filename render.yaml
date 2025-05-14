@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: hertz440
+    env: node
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: EMAILOCTOPUS_API_KEY
+        sync: false
+      - key: EMAILOCTOPUS_LIST_ID
+        sync: false
+      - key: EMAIL_USER
+        sync: false
+      - key: EMAIL_PASS
+        sync: false
+    healthCheckPath: /api/test
+    autoDeploy: true 
