@@ -10,9 +10,10 @@ const app = express();
 // Enable CORS for all routes
 app.use(cors({
   origin: ['https://tinashe-x.github.io', 'http://localhost:3000'],
-  methods: ['GET', 'POST'],
+  methods: ['GET', 'POST', 'OPTIONS'],
   allowedHeaders: ['Content-Type'],
 }));
+app.options('*', cors());
 
 // Add detailed request logging
 app.use((req, res, next) => {
