@@ -8,7 +8,11 @@ require('dotenv').config();
 const app = express();
 
 // Enable CORS for all routes
-app.use(cors());
+app.use(cors({
+  origin: ['https://tinashe-x.github.io', 'http://localhost:3000'],
+  methods: ['GET', 'POST'],
+  allowedHeaders: ['Content-Type'],
+}));
 
 // Add detailed request logging
 app.use((req, res, next) => {
