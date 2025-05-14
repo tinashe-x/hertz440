@@ -27,18 +27,11 @@ Thumbs.db
 # Build files
 dist/
 build/
+out/
 
 # Logs
 logs
 *.log
-
-# Keep assets
-!assets/
-!assets/audio/
-!assets/images/
-
-# Build output
-out/
 
 # Testing
 coverage/
@@ -46,6 +39,18 @@ coverage/
 # Temporary files
 tmp/
 temp/
+
+# DO NOT ignore assets
+!assets/
+!assets/audio/
+!assets/images/
+!assets/audio/*.mp3
+!assets/audio/*.wav
+!assets/audio/*.ogg
+!assets/images/*.jpg
+!assets/images/*.png
+!assets/images/*.gif
+!assets/images/*.svg
 
 # Media files
 *.mp4
